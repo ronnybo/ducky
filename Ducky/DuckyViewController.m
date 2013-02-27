@@ -7,9 +7,15 @@
 //
 
 #import "DuckyViewController.h"
+#import <AudioToolbox/AudioToolbox.h> 
+#import <AVFoundation//AVFoundation.h> 
 
-@interface DuckyViewController ()
-
+@interface DuckyViewController (){
+    
+    AVAudioPlayer *backgroundAudioPlayer;
+    //SystemSoundID *bleebSoundID;
+    
+}
 @end
 
 @implementation DuckyViewController
@@ -21,6 +27,33 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *filepath = [[NSBundle mainBundle]pathForResource:@"kwaak" ofType:@"aif"];
+    
+    
+    
+    if (filepath != nil){
+        NSURL *backgroundURL = [NSURL fileURLWithPath:filepath]; 
+        
+        if(backgroundURL != nil){
+            backgroundAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundURL error:nil];
+            backgroundAudioPlayer.numberOfLoops = 0;
+            [backgroundAudioPlayer prepareToPlay];
+        }
+        else {
+            NSLog(@"backgroundURL is nil");
+        }
+        
+        //NSLog(@"%@",filepath); 
+    }
+    else {
+        NSLog(@"filepath is nil");
+    }
+    
+
+    
+    //NSURL *bleebSoundID = [NSURL fileURLWithPath:[[[[NSBundle mainBundle]pathForResource:@"bleep" ofType:@"aif"]];
+    
 }
 
 - (void)viewDidUnload
@@ -45,6 +78,7 @@
 }
 - (IBAction)KwaakOnTouch:(UITapGestureRecognizer *)sender {
     NSLog(@"Kwaak! (via touch)");
+    [backgroundAudioPlayer play];
 }
 
 - (IBAction)KwaakOnPinch:(UIPinchGestureRecognizer *)sender {
@@ -54,5 +88,29 @@
 - (IBAction)KwaakNu:(UIButton *)sender {
     
     NSLog(@"Kwaak! (via knop)");
+    [backgroundAudioPlayer play];
+
+}
+
+//implementing the motion detection
+
+-(BOOL) canBecomeFirstResponder{
+    return YES;
+}
+
+-(void) viewDidAppear:(BOOL)animated{
+    [self becomeFirstResponder];
+}
+
+-(void) viewDidDisappear:(BOOL)animated{
+    [self resignFirstResponder];
+    
+}
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    if (event.subtype == UIEventSubtypeMotionShake){
+        NSLog(@"I'm shacky...!");
+        [backgroundAudioPlayer play];
+    }
 }
 @end

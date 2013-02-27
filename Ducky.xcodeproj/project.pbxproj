@@ -16,6 +16,11 @@
 		7CA0675616DBFF00007C2540 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA0675416DBFF00007C2540 /* MainStoryboard.storyboard */; };
 		7CA0675916DBFF00007C2540 /* DuckyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA0675816DBFF00007C2540 /* DuckyViewController.m */; };
 		7CA0676116DBFF54007C2540 /* ducky2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA0676016DBFF54007C2540 /* ducky2.png */; };
+		7CE5A30016DD3B37006AF3BA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE5A2FF16DD3B37006AF3BA /* AudioToolbox.framework */; };
+		7CE5A30816DDEC23006AF3BA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE5A30716DDEC23006AF3BA /* AVFoundation.framework */; };
+		7CE5A30A16DDEC80006AF3BA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE5A30916DDEC80006AF3BA /* AudioToolbox.framework */; };
+		7CE5A30C16DDEC89006AF3BA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE5A30B16DDEC89006AF3BA /* AVFoundation.framework */; };
+		7CE5A31216DDF8BD006AF3BA /* kwaak.aif in Resources */ = {isa = PBXBuildFile; fileRef = 7CE5A30216DD3F80006AF3BA /* kwaak.aif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +38,12 @@
 		7CA0675716DBFF00007C2540 /* DuckyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuckyViewController.h; sourceTree = "<group>"; };
 		7CA0675816DBFF00007C2540 /* DuckyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuckyViewController.m; sourceTree = "<group>"; };
 		7CA0676016DBFF54007C2540 /* ducky2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ducky2.png; sourceTree = "<group>"; };
-		7CA0676216DBFF5D007C2540 /* kwaak.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kwaak.m4a; sourceTree = "<group>"; };
+		7CE5A2FF16DD3B37006AF3BA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7CE5A30216DD3F80006AF3BA /* kwaak.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = kwaak.aif; sourceTree = "<group>"; };
+		7CE5A30716DDEC23006AF3BA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7CE5A30916DDEC80006AF3BA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7CE5A30B16DDEC89006AF3BA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7CE5A30D16DDEE6E006AF3BA /* bleep.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = bleep.aif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,9 +51,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CE5A30816DDEC23006AF3BA /* AVFoundation.framework in Frameworks */,
+				7CE5A30016DD3B37006AF3BA /* AudioToolbox.framework in Frameworks */,
 				7CA0674316DBFF00007C2540 /* UIKit.framework in Frameworks */,
 				7CA0674516DBFF00007C2540 /* Foundation.framework in Frameworks */,
 				7CA0674716DBFF00007C2540 /* CoreGraphics.framework in Frameworks */,
+				7CE5A30A16DDEC80006AF3BA /* AudioToolbox.framework in Frameworks */,
+				7CE5A30C16DDEC89006AF3BA /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +67,8 @@
 		7CA0673316DBFF00007C2540 = {
 			isa = PBXGroup;
 			children = (
+				7CE5A30716DDEC23006AF3BA /* AVFoundation.framework */,
+				7CE5A2FF16DD3B37006AF3BA /* AudioToolbox.framework */,
 				7CA0675F16DBFF28007C2540 /* Resources */,
 				7CA0674816DBFF00007C2540 /* Ducky */,
 				7CA0674116DBFF00007C2540 /* Frameworks */,
@@ -71,6 +87,8 @@
 		7CA0674116DBFF00007C2540 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7CE5A30B16DDEC89006AF3BA /* AVFoundation.framework */,
+				7CE5A30916DDEC80006AF3BA /* AudioToolbox.framework */,
 				7CA0674216DBFF00007C2540 /* UIKit.framework */,
 				7CA0674416DBFF00007C2540 /* Foundation.framework */,
 				7CA0674616DBFF00007C2540 /* CoreGraphics.framework */,
@@ -105,7 +123,8 @@
 		7CA0675F16DBFF28007C2540 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7CA0676216DBFF5D007C2540 /* kwaak.m4a */,
+				7CE5A30D16DDEE6E006AF3BA /* bleep.aif */,
+				7CE5A30216DD3F80006AF3BA /* kwaak.aif */,
 				7CA0676016DBFF54007C2540 /* ducky2.png */,
 			);
 			name = Resources;
@@ -162,6 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CE5A31216DDF8BD006AF3BA /* kwaak.aif in Resources */,
 				7CA0674D16DBFF00007C2540 /* InfoPlist.strings in Resources */,
 				7CA0675616DBFF00007C2540 /* MainStoryboard.storyboard in Resources */,
 				7CA0676116DBFF54007C2540 /* ducky2.png in Resources */,
@@ -287,6 +307,7 @@
 				7CA0675E16DBFF00007C2540 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

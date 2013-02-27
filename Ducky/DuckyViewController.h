@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface DuckyViewController : UIViewController
 @property (retain, nonatomic) IBOutlet UITapGestureRecognizer *tap;
 @property (retain, nonatomic) IBOutlet UIButton *kwaakKnop;
